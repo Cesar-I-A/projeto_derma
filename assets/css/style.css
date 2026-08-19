@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+:root {
+    --bege: #E4CDB8;
+    --creme: #E8D6C4;
+    --bege-escuro: #CFB59D;
+    --marrom: #463625;
+    --marrom-escuro: #241B13;
+    --laranja: #AF6028;
+    --marrom-medio: #6D5C4B;
+    --dourado: #CF996B;
+}
+
+body {
+    background-color: var(--bege);
+}
