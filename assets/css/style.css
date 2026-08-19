@@ -8,16 +8,38 @@
 }
 
 :root {
-    --bege: #E4CDB8;
-    --creme: #E8D6C4;
-    --bege-escuro: #CFB59D;
-    --marrom: #463625;
-    --marrom-escuro: #241B13;
-    --laranja: #AF6028;
-    --marrom-medio: #6D5C4B;
-    --dourado: #CF996B;
+    --bege: #E4CDB8; /* Fundo principal */
+    --creme: #E8D6C4; /* Seções e cards */
+    --bege-escuro: #CFB59D; /* Bordas, detalhes e fundos secundários */
+    --marrom: #463625; /* Textos principais */
+    --marrom-escuro: #241B13; /* Títulos e elementos de maior constraste */
+    --laranja: #AF6028; /* Destaques, botões e títulos */
+    --marrom-medio: #6D5C4B; /* Textos secundários */
+    --dourado: #CF996B; /* Detalhes decorativos */
 }
 
 body {
     background-color: var(--bege);
+}
+
+#cabecalho {
+    display: flex;
+    position: relative;
+    background-color: var(--marrom-escuro);
+    width: 97%;
+    height: 200px;
+    border-radius: 30px;
+    margin: 20px auto;
+}
+
+#log {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px ;
+}
+
+#carouselExampleAutoplaying{
+    max-width: 450px;
+    max-height: 200px;
 }
