@@ -27,19 +27,41 @@ body {
     position: relative;
     background-color: var(--marrom-escuro);
     width: 97%;
-    height: 200px;
+    height: 160px;
     border-radius: 30px;
     margin: 20px auto;
 }
 
 #log {
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin: 20px ;
 }
 
 #carouselExampleAutoplaying{
-    max-width: 450px;
-    max-height: 200px;
+    width: 700px;
+    margin: 50px auto;
+    height: 400px;
+
+}
+
+
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.fa-whatsapp {
+    font-size: 35px;
+}
+
+.fa-instagram {
+    font-size: 35px;
 }
