@@ -11,8 +11,9 @@
 </head>
 <body>
     <header id="cabecalho">
-        <img id="log" src="assets/images/logo.png" alt="Logo da Empresa"> 
+         
         <div class="container"> 
+            <img id="log" src="assets/images/logo.png" alt="Logo da Empresa">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"> 
                     <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg> 
@@ -29,37 +30,65 @@
             </div> 
         </div>
     </header>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="
-    width: 700px;
-    margin: 50px auto;
-    height: 400px;
-">
-        <div class="carousel-inner h-100">
-          <div class="carousel-item h-100 active" data-bs-interval="2000000000000000" style>
-            <img src="assets/images/logo.png" class="d-block w-100 h-100" alt="..." style="object-fit: cover;">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="assets/images/carro.jpg" class="d-block w-100 h-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="assets/images/logo.png" class="d-block w-100 h-100" alt="...">
-          </div>
+    <main>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 700px; margin: 50px auto; height: 400px;">
+            <div class="carousel-inner h-100">
+            <div class="carousel-item h-100 active" data-bs-interval="2000000000000000" style>
+                <img src="assets/images/logo.png" class="d-block w-100 h-100" alt="..." style="object-fit: cover;">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/images/carro.jpg" class="d-block w-100 h-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets/images/logo.png" class="d-block w-100 h-100" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        <div class="cards">
+            <div  id="card1" class="card" style="width: 18rem;">
+                <img src="assets/images/equipe_caos.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Nossa equipe</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <div  id="card1" class="card" style="width: 18rem;">
+                <img src="assets/images/laboratorioresenha.jpg" class="card-img-top2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Nosso espaço</h5>
+                  <p class="card-text">Venha conhecer o espaço que produz os melhores medicamentos para você.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ofertas">
+            <h4>Ofertas disponíveis</h4>
+            <div class="ofertas_scroll">
+            </div>
+
+        </div>
+
+         
+
+    </main>
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
         <div class="col-md-4 d-flex align-items-center"> 
             <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
                 <svg class="bi" width="30" height="24" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> 
             </a> 
-                <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span> 
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2026 Farmes Benfica CNPJ ************</span> 
             </div> 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                  <li class="ms-3">
