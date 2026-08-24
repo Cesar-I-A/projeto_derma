@@ -46,7 +46,9 @@ body {
 
 }
 
-
+.nav-link .px-2 .link-body-emphasis {
+    color: red;
+}
 
 .carousel-inner {
     position: relative;
