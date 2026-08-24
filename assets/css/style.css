@@ -19,7 +19,28 @@
 }
 
 body {
+    position: relative;
     background-color: var(--bege);
+    /* background-image: url('assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 400px ; */
+}
+body::before{
+    content:"";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/logo_semFundo.png');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: 60vh;
+    opacity: 0.30;
+    z-index: -1;
+    pointer-events: none;
 }
 
 #cabecalho {
@@ -27,27 +48,73 @@ body {
     position: relative;
     background-color: var(--marrom-escuro);
     width: 100%;
-    height: 160px;
+    min-height: 160px;
     flex-wrap: wrap;
     align-items: center;
+    z-index: 10000;
+}
+
+
+#logo_doisTitulo {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 20px;
+    top: 55%;
+    gap: 20px;
+    transform: translateY(-50%)
+}
+
+#cabecalho .container {
+    display: flex;
+    justify-content: center;
+}
+#nome_cabeca{
+    display: flex;
+    flex-direction: column;
+    
+}
+#farmes{
+    color:var(--creme);
+    font-family:'Brush Script MT','Great Vibes','Dancing Script', cursive;
+    font-size: 40px;
+}
+#benfica{
+    color:var(--laranja);
+    font-family:'Brush Script MT','Great Vibes','Dancing Script', cursive;
+    font-size: 40px;
+}
+
+.links {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
 }
 
 #log {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin: 20px ;
+    
 }
 
 #carouselExampleAutoplaying{
-    width: 700px;
+    width: 1000px;
     margin: 50px auto;
     height: 400px;
 
 }
 
-.nav-link .px-2 .link-body-emphasis {
-    color: red;
+.links_teste {
+    color: var(--laranja);
+    margin: 50px ;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .carousel-inner {
@@ -78,8 +145,50 @@ body {
     justify-content: space-around;
 }
 
-.ofertas_scroll{
-    background-color: #463625;
-    height: 10px;
-    width: 1000px;
+.card .fa-whatsapp {
+    align-items: center;
+    color: green;
+    font-size: 190px;
+    margin: 10px auto;
+}
+
+.card-body {
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+@media (max-width:768px){
+    #cabecalho{
+        min-height: auto;
+        padding: 15px 0;
+    }
+    #log{
+        position: static;
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        border-radius: 50%;
+        transform: none;
+        margin-bottom: 10px;
+    }
+    #cabecalho .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav-link{
+        font-size:14px
+    }
+    #carouselExampleAutoplaying{
+    width: 20rem;
+    margin: 50px auto;
+    }
+
+    .links_teste {
+        color: var(--laranja);
+        margin: 10px ;
+        font-size: 20px;
+    }
 }
