@@ -37,8 +37,8 @@ body::before{
     background-image: url('../images/logo_semFundo.png');
     background-repeat: no-repeat;
     background-position: fixed;
-    background-size: 60vh;
-    opacity: 0.30;
+    background-size: 70vh;
+    opacity: 0.55;
     z-index: -1;
     pointer-events: none;
 }
