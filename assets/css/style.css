@@ -21,11 +21,7 @@
 body {
     position: relative;
     background-color: var(--bege);
-    /* background-image: url('assets/images/logo.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: 400px ; */
+    
 }
 body::before{
     content:"";
@@ -55,14 +51,11 @@ body::before{
 }
 
 
+
 #logo_doisTitulo {
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    left:1.25vw;
-    top: 55%;
-    gap: 1.25vw;
-    transform: translateY(-50%)
+    align-items: center;
+    gap:1.8vw
 }
 
 #cabecalho .container {
@@ -77,12 +70,12 @@ body::before{
 #farmes{
     color:var(--creme);
     font-family:'Brush Script MT','Great Vibes','Dancing Script', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 #benfica{
     color:var(--laranja);
     font-family:'Brush Script MT','Great Vibes','Dancing Script', cursive;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .links {
@@ -94,16 +87,16 @@ body::before{
 }
 
 #log {
-    width: 7vw;
-    height: 7vw;
+    width: 6vw;
+    height: 6vw;
     border-radius: 50%;
     
 }
 
 #carouselExampleAutoplaying{
-    width: 1000px;
+    width: 25vw;
     margin: 50px auto;
-    height: 400px;
+    height: 20vh;
 
 }
 
@@ -136,8 +129,8 @@ a {
 }
 
 .card-img-top2{
-    height: 190px;
-    width: 286px;
+    height: 24vh;
+    width: 100%;
 }
 
 .cards{
@@ -160,20 +153,19 @@ a {
 }
 
 @media (max-width:768px){
-    #cabecalho{
-        min-height: auto;
-        padding: 15px 0;
-    }
+   
+  
     #log{
-        
+        width: 20vw;
+        height: 20vw;
     }
-    #cabecalho .container{
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    #cabecalho{
+        max-height:15vh;
     }
-    .nav-link{
-        font-size:14px
+    #menu{
+        background-color:gray;
+        width:10vw;
+        height: 5vh;
     }
     #carouselExampleAutoplaying{
     width: 20rem;
@@ -181,8 +173,8 @@ a {
     }
 
     .links_teste {
-        color: var(--laranja);
-        margin: 10px ;
-        font-size: 20px;
+        
+        display: none;
+
     }
 }
