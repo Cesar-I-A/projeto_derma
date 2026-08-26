@@ -41,13 +41,16 @@ body::before{
 
 #cabecalho {
     display: flex;
-    position: relative;
+    position: sticky;
     background-color: var(--marrom-escuro);
-    width: 100%;
+    width: 80%;
     min-height: 10vh;
     flex-wrap: wrap;
     align-items: center;
     z-index: 10000;
+    margin: 20px auto;
+    border-radius: 10px;
+    top: 0;
 }
 
 
@@ -161,6 +164,8 @@ a {
     }
     #cabecalho{
         max-height:15vh;
+        width:100%;
+        margin:0;
     }
     #menu{
         background-color:gray;
