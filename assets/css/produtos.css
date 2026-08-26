@@ -23,7 +23,7 @@ main {
 }
 
 body {
-    background-color: var(--creme);
+    background-color: var(--bege);
 }
 
 body::before {

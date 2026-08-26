@@ -20,7 +20,7 @@
 
 body {
     position: relative;
-    background-color: var(--creme);
+    background-color: var(--bege);
 }
 
 
@@ -35,7 +35,7 @@ body::before {
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 65vh;
-    opacity: 0.45;
+    opacity: 0.90;
     z-index: -1;
     pointer-events: none;
 }
@@ -51,7 +51,7 @@ body::after {
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 65vh;
-    opacity: 0.55;
+    opacity: 0.90;
     z-index: -1;
     pointer-events: none;
 }
