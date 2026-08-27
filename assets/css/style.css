@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
     flex-wrap: wrap;
     user-select: none;
 }
@@ -13,7 +12,7 @@
     --bege-escuro: #CFB59D; /* Bordas, detalhes e fundos secundários */
     --marrom: #463625; /* Textos principais */
     --marrom-escuro: #241B13; /* Títulos e elementos de maior constraste */
-    --laranja: #AF6028; /* Destaques, botões e títulos */
+    --laranja: #d66a00; /* Destaques, botões e títulos */
     --marrom-medio: #6D5C4B; /* Textos secundários */
     --dourado: #CF996B; /* Detalhes decorativos */
 }
@@ -21,8 +20,10 @@
 body {
     position: relative;
     background-color: var(--bege);
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* FUNDO COM LOGO */
 
 body::before {
     content:"";
@@ -34,11 +35,13 @@ body::before {
     background-image: url('../images/logo_semFundo.png');
     background-repeat: no-repeat;
     background-position: top left;
-    background-size: 65vh;
-    opacity: 0.90;
+    background-size: 60vh;
+    opacity: 1;
     z-index: -1;
     pointer-events: none;
 }
+
+/* FUNDO COM LOGO */
 
 body::after {
     content:"";
@@ -50,8 +53,8 @@ body::after {
     background-image: url('../images/logo_semFundo2.png');
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: 65vh;
-    opacity: 0.90;
+    background-size: 60vh;
+    opacity: 1;
     z-index: -1;
     pointer-events: none;
 }
@@ -61,7 +64,7 @@ body::after {
     display: flex;
     position: relative;
     background-color: var(--marrom-escuro);
-    width: 95%;
+    width: 80%;
     min-height: 140px;
     flex-wrap: wrap;
     align-items: center;
@@ -70,6 +73,75 @@ body::after {
     margin: 10px auto;
     margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#linha {
+    border: 2px solid var(--laranja);
+    width: 5%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#texto_chamativo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    align-content: space-around;
+    align-items: flex-start;
+}
+
+#texto_chamativo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: var(--marrom-escuro);
+}
+
+#conheca_produtos {
+    background-color: var(--laranja);
+    color: var(--creme);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    text-align: center;
+    height: 40px;
+    padding-top: 8px;
+}
+
+#conheca_produtos a {
+    color: var(--creme);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #logo_doisTitulo {
