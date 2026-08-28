@@ -19,45 +19,10 @@
 
 body {
     position: relative;
-    background-color: var(--bege);
+    background-color: var(--creme);
     font-family: 'Montserrat', sans-serif;
 }
 
-/* FUNDO COM LOGO */
-
-body::before {
-    content:"";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/logo_semFundo.png');
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 60vh;
-    opacity: 1;
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* FUNDO COM LOGO */
-
-body::after {
-    content:"";
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/logo_semFundo2.png');
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 60vh;
-    opacity: 1;
-    z-index: -1;
-    pointer-events: none;
-}
 
 
 #cabecalho {
@@ -75,14 +40,30 @@ body::after {
     margin-top: 20px;
 }
 
+#cabecalho p {
+    font-family: 'Playfair Display', serif;
+    color: var(--creme);
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
 
+#texto_cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
 
-
-
-
-
-
-
+#texto_cabecalho #linha {
+    border: 2px solid var(--laranja);
+    width: 20%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
 
 
@@ -179,7 +160,7 @@ body::after {
 #conheca_produtos {
     display: inline-block;
     background-color: var(--laranja);
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -189,7 +170,8 @@ body::after {
     color: var(--creme);
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 22px;
+    padding: 4px 22px;
+    margin: 10px 0;
 }
 
 #conheca_produtos:hover {
@@ -197,6 +179,28 @@ body::after {
 }
 
 
+.linha_divisor_ofertas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.linha_divisor_ofertas h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: var(--marrom-escuro);
+    margin-bottom: 10px;
+}
+
+.linha_divisor_ofertas #linha {
+    border: 2px solid var(--laranja);
+    width: 7%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 6px;
+}
 
 .ofertas {
     display: flex;
@@ -215,11 +219,12 @@ body::after {
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background-color: var(--bege-escuro);
 }
 
 .oferta_card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(221, 25, 25, 0.12);
 }
 
 .oferta_card img {
