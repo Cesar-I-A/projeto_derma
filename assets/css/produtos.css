@@ -16,7 +16,26 @@
 }
 
 body {
-    background-color: var(--bege-escuro);
+    position: relative;
+    background-color: var(--creme);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+
+body::before {
+    background-image: url("../images/fundo.png");
+    background-size: cover;
+    background-position: center;
+    content: "";
+    position: fixed;
+    width: 108%;
+    height: 107%;
+    top: -50px;
+    left: -100px;
+    z-index: -1;
 }
 
 h1 {

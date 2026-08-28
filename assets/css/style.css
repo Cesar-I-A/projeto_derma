@@ -21,7 +21,27 @@ body {
     position: relative;
     background-color: var(--creme);
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
+
+
+
+
+body::before {
+    background-image: url("../images/fundo.png");
+    background-size: cover;
+    background-position: center;
+    content: "";
+    position: fixed;
+    width: 108%;
+    height: 107%;
+    top: -50px;
+    left: -100px;
+    z-index: -1;
+    flex-wrap: wrap;
+}
+
+
 
 
 
@@ -233,7 +253,47 @@ body {
     object-fit: cover;
 }
 
+.cta-whatsapp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--marrom-escuro);
+    color: var(--creme);
+    border-radius: 12px;
+    padding: 36px 36px;
+    margin-top: 30px;
+}
 
+.cta-whatsapp h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.cta-whatsapp p {
+    background-color: var(--laranja);
+    font-size: 14px;
+}
+
+.btn-zap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 100px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-zap:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px);
+}
 
 
 .divisor {
