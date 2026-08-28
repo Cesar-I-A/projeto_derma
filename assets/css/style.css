@@ -62,7 +62,8 @@ body::after {
 
 #cabecalho {
     display: flex;
-    position: relative;
+    position: sticky;   /* era: relative */
+    top: 20px;          /* novo */
     background-color: var(--marrom-escuro);
     width: 80%;
     min-height: 140px;
@@ -109,35 +110,138 @@ body::after {
     color: var(--marrom-escuro);
 }
 
+#texto_chamativo p {
+    max-width: 42ch;
+}
+
+.cards {
+    display: flex;
+    gap: 24px;               /* justify-content space-around */
+}
+
+.card {
+    width: 18rem;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;        /* corta a imagem nos cantos arredondados */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-img-top,
+.card-img-top2 {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;        /*garante o mesmo enquadramento */
+}
+
+.card .fa-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;            /*igual a altura das fotos */
+    color: green;
+    font-size: 90px;          /*era 190px */
+    background-color: #f0f0f0;
+}
+
+.cards {
+    display: flex;
+    justify-content: flex-start;   /* troca aqui: space-around → flex-start */
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card-body {
+    padding: 24px;
+    text-align: left;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--marrom-escuro);
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: var(--marrom-medio);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
 #conheca_produtos {
+    display: inline-block;
     background-color: var(--laranja);
-    color: var(--creme);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 250px;
-    text-align: center;
-    height: 40px;
-    padding-top: 8px;
 }
 
 #conheca_produtos a {
+    display: block;
     color: var(--creme);
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 22px;
+}
+
+#conheca_produtos:hover {
+    background-color: #964c02;
+}
+
+
+
+.ofertas {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.oferta_card {
+    flex: 0 0 auto;
+    width: 18rem;
+    scroll-snap-align: start;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.oferta_card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.oferta_card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
 }
 
 
 
 
+.divisor {
+    border: none;
+    border-top: 10px solid var(--bege-escuro);
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
 
-
-
-
-
-
-
-
+#nossa_loja {
+    padding-top: 20px;
+}
 
 
 
@@ -147,17 +251,17 @@ body::after {
 #logo_doisTitulo {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    left: 20px;
-    top: 55%;
     gap: 20px;
-    transform: translateY(-50%)
+    align-items: center;
 }
 
 #cabecalho .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
 #nome_cabeca{
     display: flex;
     flex-direction: column;
@@ -180,6 +284,7 @@ body::after {
     display: flex;
     list-style: none;
     margin-bottom: 0;
+    gap: 40px;
 }
 
 #log {
@@ -191,12 +296,11 @@ body::after {
 
 .links_teste {
     color: var(--laranja);
-    margin: 50px ;
-    font-size: 27px;
+    font-size: 27px;       
 }
 
 #carouselExampleAutoplaying{
-    width: 1100px;
+    max-width: 1400px;
     margin: 50px auto;
     height: 300px;
 
@@ -223,35 +327,17 @@ a {
     font-size: 35px;
 }
 
-.card-img-top2{
-    height: 190px;
-    width: 286px;
-}
 
-.cards{
-    display: flex;
-    justify-content: space-around;
-}
 
-.card .fa-whatsapp {
-    align-items: center;
-    color: green;
-    font-size: 190px;
-    margin: 10px auto;
-}
-
-.card-body {
-    text-align: center;
-    align-items: center;
-    margin: 20px;
-    padding: 20px;
-}
 
 @media (max-width:768px){
-    #cabecalho{
-        min-height: auto;
-        padding: 15px 0;
+    #cabecalho .container{
+        flex-direction: column;
+        justify-content: center;   /* nova linha */
+        align-items: center;
+        gap: 10px;
     }
+
     #log{
         position: static;
         width: 60px;
@@ -269,14 +355,24 @@ a {
     .nav-link{
         font-size:14px
     }
+
     #carouselExampleAutoplaying{
     width: 20rem;
     margin: 50px auto;
     }
 
-    .links_teste {
-        color: var(--laranja);
-        margin: 10px ;
-        font-size: 20px;
+    
+    .links {
+        flex-wrap: nowrap;
+        gap: 12px;
+        justify-content: center;  /* era: space-between */
+        width: 100%;              /* novo */
+        padding: 10px 20px;          /* novo */
     }
+
+    .links_teste {
+    color: var(--laranja);
+    font-size: 13px;        /* era 20px — grande demais pra caber 3 itens numa linha */
+    }
+
 }
