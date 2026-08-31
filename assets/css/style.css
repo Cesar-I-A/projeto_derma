@@ -98,7 +98,6 @@ body::before {
 #texto_chamativo {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 50px;
     margin-bottom: 20px;
     align-content: space-around;
@@ -257,6 +256,12 @@ footer {
     background-color: var(--marrom-escuro);
     color: var(--creme);
     padding: 40px 0 24px;
+}
+
+
+.cor_botao {
+    background-color: var(--laranja);
+    border: none;
 }
 
 .cta_whatsapp {
