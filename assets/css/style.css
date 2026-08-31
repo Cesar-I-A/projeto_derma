@@ -253,28 +253,66 @@ body::before {
     object-fit: cover;
 }
 
-.cta-whatsapp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
+footer {
     background-color: var(--marrom-escuro);
     color: var(--creme);
-    border-radius: 12px;
-    padding: 36px 36px;
-    margin-top: 30px;
+    padding: 40px 0 24px;
 }
 
-.cta-whatsapp h5 {
+.cta_whatsapp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.cta_whatsapp h5 {
     font-family: 'Playfair Display', serif;
     font-size: 22px;
+    color: var(--creme);
     margin-bottom: 6px;
 }
 
-.cta-whatsapp p {
-    background-color: var(--laranja);
+.cta_whatsapp p {
+    color: var(--bege-escuro);
     font-size: 14px;
+}
+
+.divisor_footer {
+    border: none;
+    border-top: 1px solid rgba(232, 214, 196, 0.2);
+    margin: 0 0 24px;
+}
+
+.rodape_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.rodape_info span {
+    color: var(--bege-escuro);
+    font-size: 13px;
+}
+
+.rodape_info .nav {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.rodape_info .fa-brands {
+    color: var(--creme);
+    font-size: 19px;
+    transition: color 0.2s ease;
+}
+
+.rodape_info .fa-brands:hover {
+    color: var(--laranja);
 }
 
 .btn-zap {
@@ -394,6 +432,33 @@ a {
 
 
 
+.botao_flutuante {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 20px;
+    border-radius: 100px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+}
+
+.botao_flutuante:hover {
+    transform: scale(1.05);
+}
+
+.botao_flutuante i {
+    font-size: 22px;
+}
+
+
 
 @media (max-width:768px){
     #cabecalho .container{
@@ -440,4 +505,12 @@ a {
     font-size: 13px;        /* era 20px — grande demais pra caber 3 itens numa linha */
     }
 
+
+    .botao_flutuante span {
+        display: none;
+    }
+
+    .botao_flutuante {
+        padding: 14px;
+    }
 }
