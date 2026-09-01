@@ -51,7 +51,7 @@ body::before {
     top: 20px;          /* novo */
     background-color: var(--marrom-escuro);
     width: 80%;
-    min-height: 140px;
+    min-height: 130px;
     flex-wrap: wrap;
     align-items: center;
     z-index: 10000;
