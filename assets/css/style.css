@@ -101,7 +101,8 @@ body::before {
     margin-top: 50px;
     margin-bottom: 20px;
     align-content: space-around;
-    align-items: flex-start;
+    align-items: flex-start;;
+    margin:20px;
 }
 
 #texto_chamativo h1 {
@@ -263,6 +264,11 @@ footer {
     background-color: var(--laranja);
     border: none;
 }
+
+.cor_botao:hover {
+    background-color: #964c02;
+}
+
 
 .cta_whatsapp {
     display: flex;
