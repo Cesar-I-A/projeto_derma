@@ -99,6 +99,22 @@ a {
     gap: 40px;
 }
 
+.produto button {
+    background-color: var(--laranja);
+    color: var(--creme);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.produto button:hover {
+    background-color: #964c02;
+}
+
+
+
 .links_teste {
     color: var(--laranja);
     font-size: 27px;       
