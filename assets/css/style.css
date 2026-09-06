@@ -27,7 +27,7 @@ body {
 
 
 
-body::before {
+body::before { /*Deixa a iamgem no fundo da tela, mas não atrapalha o conteúdo */
     background-image: url("../images/fundo.png");
     background-size: cover;
     background-position: center;
@@ -41,14 +41,18 @@ body::before {
     flex-wrap: wrap;
 }
 
-.offcanvas {
+.offcanvas {   /*estilização do menu lateral do bootstrap */
     background-color: #3f2a16f1;
     
 }
-.offcanvas-title{
+.offcanvas-title{   /* escrito "saude, cuidado e bem-estar" dentro do menu lateral do bootstrap */
     color: var(--creme);
     font-size: 1.5rem;
     transition: color 0.3s ease;
+}
+
+.navbar {
+    display: none; /* some por padrão: só volta a aparecer no media query de celular */
 }
 
 .navbar-nav .nav-link {
@@ -155,7 +159,7 @@ body::before {
     object-fit: cover;        /*garante o mesmo enquadramento */
 }
 
-.card .fa-whatsapp {
+.card .fa-whatsapp { /* ícone do whatsapp dentro do card no rodapé */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -284,7 +288,7 @@ footer {
 }
 
 
-.cta_whatsapp {
+.cta_whatsapp { /*classe que engloba o texto e o botão do whatsapp no rodapé */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -378,9 +382,11 @@ footer {
 
 #logo_doisTitulo {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     gap: 20px;
     align-items: center;
+    
 }
 
 #cabecalho .container {
@@ -486,9 +492,23 @@ a {
 
 
 @media (max-width:768px){
+
+    #cabecalho {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 15px;
+        flex-direction: row-reverse; ;
+      
+        
+    }
     .navbar{
         display: flex;
         opacity: 1;
+        position: static;      /* antes ficava "fixed-top", preso no topo da tela */
+        width: 100%;
+        justify-content: flex-end;
+        padding: 10px 20px;
+        max-width: max-content;
     }
     #texto_cabecalho {
         display: none;
@@ -497,26 +517,29 @@ a {
         display: none;
     }
     #cabecalho .container{
-        flex-direction: column;
+        flex-direction: row;
+        order: 1;
+        flex: 1;
         justify-content: center;   /* nova linha */
         align-items: center;
         gap: 10px;
+        margin: 0;
+        max-width: max-content;
     }
 
     #log{
         position: static;
-        width: 80px;
-        height: 80px;
-        margin: 10px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         transform: none;
-        margin-bottom: 10px;
+       
     }
-    #cabecalho .container{
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+
+    #farmes #benfica {
+        font-size: 20px;
     }
+
     .nav-link{
         font-size:14px
     }

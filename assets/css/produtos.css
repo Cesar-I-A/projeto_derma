@@ -287,10 +287,36 @@ main {
 }
 
 @media (max-width:768px){
+
+        .navbar{
+        display: flex;
+        opacity: 1;
+    }
+    #texto_cabecalho {
+        display: none;
+    }
+    .links {
+        display: none;
+    }
     #cabecalho .container{
         flex-direction: column;
         justify-content: center;   /* nova linha */
         align-items: center;
         gap: 10px;
     }
+
+    #log{
+        position: static;
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        border-radius: 50%;
+        transform: none;
+        margin-bottom: 10px;
+    }
+    
+    .nav-link{
+        font-size:14px
+    }
+    
 }
